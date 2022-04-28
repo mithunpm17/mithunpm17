@@ -1,0 +1,10 @@
+create database invoice;
+use invoice;
+create table student(id int primary key auto_increment, name varchar(20), age int, city varchar(30));
+desc student;
+alter table student add dob date;
+desc student;
+alter table student modify dob year;
+desc student;
+alter table student drop city;
+desc student;
