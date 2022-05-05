@@ -1,0 +1,11 @@
+use invoice;
+insert into CUSTOMER values('1','abc house','ekm','90675839');
+desc CUSTOMER;
+insert into CUSTOMER values('2','DEF house','TVM','90675839');
+insert into CUSTOMER values('3','HIJ house','PTA','90675859');
+insert into CUSTOMER values('4','PRANAV house','KOLLAM','90758455');
+SELECT * FROM CUSTOMER;
+insert into PRODUCT values('102','soap','65');
+insert into PRODUCT values('103','pencil','75');
+insert into PRODUCT values('104','pen','69');
+select * from PRODUCT;
