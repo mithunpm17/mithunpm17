@@ -1,0 +1,15 @@
+select * from customer;
+select pname,price from product;
+select distinct p_id from product;
+select distinct p_id from invoice_item;
+select price from product where price  between 50 and 150;
+select * from customer where city in('eranakulam','tvm');
+select * from master_invoice where inv_date between '2021-01-01' and '2021-03-31';
+select * from customer where city not in('tvm');
+select address from customer where phone_no IS NULL;
+select address from customer order by address desc;
+select * from customer order by city asc,address desc;
+select city from customer where city like 't%'; 
+select city from customer where city like '____%';
+select city from customer where city like '_r%';
+select city from customer where city like 't_%';
