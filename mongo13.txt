@@ -1,0 +1,118 @@
+use invoice
+'already on db invoice'
+use invoice
+'already on db invoice'
+db.customer.find({$or:[{"city":"kozhikode"},{"city":"malapuram"}]}).pretty()
+{ _id: ObjectId("62a725a0bda64c2181ca9ccf"),
+  name: 'nayana',
+  address: 'nayanas',
+  city: 'kozhikode',
+  age: '50',
+  ph_no: '9078765538' }
+{ _id: ObjectId("62a725a0bda64c2181ca9cd0"),
+  name: 'jimin',
+  address: 'abcd',
+  city: 'kozhikode',
+  age: '34',
+  ph_no: '7865430122' }
+db.CUSTOMER.find({"age":{$lt:"50"}}).pretty()
+db.customer.find({"age":{$lt:"50"}}).pretty()
+{ _id: ObjectId("62a72064bda64c2181ca9ccd"),
+  name: 'anju',
+  address: 'anju bhavan',
+  city: 'pathanamthitta',
+  age: '30',
+  ph_no: '7908540312' }
+{ _id: ObjectId("62a725a0bda64c2181ca9cd0"),
+  name: 'jimin',
+  address: 'abcd',
+  city: 'kozhikode',
+  age: '34',
+  ph_no: '7865430122' }
+{ _id: ObjectId("62a725a0bda64c2181ca9cd1"),
+  name: 'surya',
+  adress: 'white house',
+  city: 'kochi',
+  age: '43',
+  ph_no: '6567849301' }
+db.CUSTOMER.find({"age":{$gte:"40"}}).pretty()
+db.customer.find({"age":{$gte:"40"}}).pretty()
+{ _id: ObjectId("62a725a0bda64c2181ca9ccf"),
+  name: 'nayana',
+  address: 'nayanas',
+  city: 'kozhikode',
+  age: '50',
+  ph_no: '9078765538' }
+{ _id: ObjectId("62a725a0bda64c2181ca9cd1"),
+  name: 'surya',
+  adress: 'white house',
+  city: 'kochi',
+  age: '43',
+  ph_no: '6567849301' }
+db.CUSTOMER.find({"city":{$ne:"kozhikode"}}).pretty()
+db.customer.find({"city":{$ne:"kozhikode"}}).pretty()
+{ _id: ObjectId("62a72064bda64c2181ca9ccd"),
+  name: 'anju',
+  address: 'anju bhavan',
+  city: 'pathanamthitta',
+  age: '30',
+  ph_no: '7908540312' }
+{ _id: ObjectId("62a725a0bda64c2181ca9cd1"),
+  name: 'surya',
+  adress: 'white house',
+  city: 'kochi',
+  age: '43',
+  ph_no: '6567849301' }
+db.CUSTOMER.find({$nor:[{"city":"kochi"},{"city":"Malapuram"}]}).pretty()
+db.customer.find({$nor:[{"city":"kochi"},{"city":"Malapuram"}]}).pretty()
+{ _id: ObjectId("62a72064bda64c2181ca9ccd"),
+  name: 'anju',
+  address: 'anju bhavan',
+  city: 'pathanamthitta',
+  age: '30',
+  ph_no: '7908540312' }
+{ _id: ObjectId("62a725a0bda64c2181ca9ccf"),
+  name: 'nayana',
+  address: 'nayanas',
+  city: 'kozhikode',
+  age: '50',
+  ph_no: '9078765538' }
+{ _id: ObjectId("62a725a0bda64c2181ca9cd0"),
+  name: 'jimin',
+  address: 'abcd',
+  city: 'kozhikode',
+  age: '34',
+  ph_no: '7865430122' }
+db.product.distinct("productName")
+[]
+db.product.distinct("productName")
+[]
+db.product.distinct("productname")
+[ 'eraser', 'pen', 'pencil', 'sharpner' ]
+db.customer.find().sort({name:1}).pretty()
+{ _id: ObjectId("62a72064bda64c2181ca9ccd"),
+  name: 'anju',
+  address: 'anju bhavan',
+  city: 'pathanamthitta',
+  age: '30',
+  ph_no: '7908540312' }
+{ _id: ObjectId("62a725a0bda64c2181ca9cd0"),
+  name: 'jimin',
+  address: 'abcd',
+  city: 'kozhikode',
+  age: '34',
+  ph_no: '7865430122' }
+{ _id: ObjectId("62a725a0bda64c2181ca9ccf"),
+  name: 'nayana',
+  address: 'nayanas',
+  city: 'kozhikode',
+  age: '50',
+  ph_no: '9078765538' }
+{ _id: ObjectId("62a725a0bda64c2181ca9cd1"),
+  name: 'surya',
+  adress: 'white house',
+  city: 'kochi',
+  age: '43',
+  ph_no: '6567849301' }
+db.customer.aggregate( [{ $count: "city" }])
+{ city: 4 }
